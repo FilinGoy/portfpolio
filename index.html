@@ -32,29 +32,70 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <nav class="container px-0">
-        <ul class="d-flex justify-content-between my-5">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About me</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contacts</a></li>
-        </ul>
-    </nav>
-    <div class="container py-5">
+<body>  
+    <div class="offcanvas offcanvas-start p-3" data-bs-scroll="true" tabindex="-1" id="offcanvas"
+        aria-labelledby="offcanvas">
+        <div class="offcanvas-header py-0">
+            <h3 class="offcanvas-title fw-bold" id="offcanvas">Denis Novik</h3>
+            <button type="button" class="btn-close btn-clear" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+        </div>
+        <div class="offcanvas-body py-0 d-flex flex-column fs-6" data-bs-dismiss="offcanvas">
+            <p>
+                UX | UI designer    
+                24 years old, Minsk
+            </p>  
+
+            <hr>
+
+            <a href="#" class="active">Home</a>
+            <a href="#abous-us">About me</a>
+            <a href="#skills">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contacts">Contacts</a>
+
+            <div class="mt-auto fs-5">
+                <hr>
+                ❤️ feat. love FG
+            </div>
+        </div>
+    </div>  
+    <nav class="container-fluid sticky-md-top bg-white">
+        <div class="container px-0 py-1 py-sm-3 py-md-5">
+            <div class="d-none d-md-flex justify-content-between">        
+                <a href="#" class="active">Home</a>
+                <a href="#abous-us">About me</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contacts">Contacts</a>
+            </div>
+            <div class="d-flex d-md-none justify-content-between align-items-center">
+                <a type="button" class="btn btn-light d-flex align-items-center" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvas" aria-controls="offcanvas">
+                    <img src="image/list.svg" alt="Меню" class="pe-1">
+                    Меню
+                </a>
+                <div class="d-flex">
+                    <a href="#" class="fs-6">
+                        RU <span class="text-black">| ENG</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>  
+
+    <div class="container py-5 px-4" id="home">
         <div class="row justify-content-between">
-            <div class="col-3">
+            <div class="col-10 col-md-3">
                 <h1>Denis Novik</h1>
             </div>
-            <div class="col-3 fs-4 d-flex justify-content-center align-self-end">
+            <div class="col-10 col-md-3 fs-4 d-flex justify-content-md-center align-self-end">
                 <p class="fs-4">
                     UX | UI designer
                     <br>
                     24 years old, Minsk
                 </p>
             </div>
-            <div class="col-3 d-flex align-items-center justify-content-end fs-4">
+            <div class="col-1 d-flex align-items-center justify-content-end fs-4">
                 <a href="#" class="rotate">
                     RU <span class="text-black">| ENG</span>
                 </a>
@@ -64,7 +105,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-light py-8">
+    <div class="container-fluid bg-light py-8" id="abous-us">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col text-center fs-4 ge-3">
@@ -84,7 +125,7 @@
             </div>
         </div>
     </div>
-    <div class="container py-8 ge-3">
+    <div class="container py-8 ge-3" id="skills">
         <div class="row justify-content-center">
             <div class="col text-center fs-4">
                 <h2>Skills</h2>
@@ -97,7 +138,7 @@
                     <img src="image/icon_ps.png" alt="Abode Photoshop" class="img-fluid">
                     <p class="py-4">Abode<br>Photoshop</p>
                 </div>
-                <div class="d-flex justify-content-around">
+                <div class="d-flex justify-content-evenly">
                     <a href="#"><img src="image/Star.png" alt="1 звезда" width="28px" class="img-fluid"></a>
                     <a href="#"><img src="image/Star.png" alt="2 звезды" width="28px" class="img-fluid"></a>
                     <a href="#"><img src="image/Star.png" alt="3 звезды" width="28px" class="img-fluid"></a>
@@ -110,7 +151,7 @@
                     <img src="image/icon_ai.png" alt="Abode Illustrator" class="img-fluid">
                     <p class="py-4">Abode<br>Illustrator</p>
                 </div>
-                <div class="d-flex justify-content-around">
+                <div class="d-flex justify-content-evenly">
                     <a href="#"><img src="image/Star.png" alt="1 звезда" width="28px" class="img-fluid"></a>
                     <a href="#"><img src="image/Star.png" alt="2 звезды" width="28px" class="img-fluid"></a>
                     <a href="#"><img src="image/Star.png" alt="3 звезды" width="28px" class="img-fluid"></a>
@@ -123,7 +164,7 @@
                     <img src="image/icon_ae.png" alt="Adobe After Effects" class="img-fluid">
                     <p class="py-4">Adobe<br>After Effects</p>
                 </div>
-                <div class="d-flex justify-content-around">
+                <div class="d-flex justify-content-evenly">
                     <a href="#"><img src="image/Star.png" alt="1 звезда" width="28px" class="img-fluid"></a>
                     <a href="#"><img src="image/Star.png" alt="2 звезды" width="28px" class="img-fluid"></a>
                     <a href="#"><img src="image/Star.png" alt="3 звезды" width="28px" class="img-fluid"></a>
@@ -136,7 +177,7 @@
                     <img src="image/icon_figma.png" alt="Figma" class="img-fluid">
                     <p class="py-4">Figma</p>
                 </div>
-                <div class="d-flex justify-content-around">
+                <div class="d-flex justify-content-evenly">
                     <a href="#"><img src="image/Star.png" alt="1 звезда" width="28px" class="img-fluid"></a>
                     <a href="#"><img src="image/Star.png" alt="2 звезды" width="28px" class="img-fluid"></a>
                     <a href="#"><img src="image/Star.png" alt="3 звезды" width="28px" class="img-fluid"></a>
@@ -146,7 +187,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-light py-8">
+    <div class="container-fluid bg-light py-8" id="portfolio">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-6 text-center fs-4 py-5">
@@ -179,7 +220,7 @@
             </div>
         </div>
     </div>
-    <div class="container py-8">
+    <div class="container py-8 px-4" id="contacts">
         <div class="row d-flex flex-column align-items-center text-center">
             <div class="col-12 text-center fs-4 ge-3">
                 <h2>Contacts</h2>
@@ -202,5 +243,6 @@
             </div>
         </div>
     </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

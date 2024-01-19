@@ -8,11 +8,6 @@
   src: local('Gilroy Bold'), local('Gilroy-Bold'), url('../fonts/Gilroy-Bold.woff2') format('woff2'), url('../fonts/Gilroy-Bold.woff') format('woff'), url('../fonts/Gilroy-Bold.ttf') format('truetype');
   font-weight: 700;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 html,
 body {
   font-family: "Gilroy", sans-serif;
@@ -23,7 +18,7 @@ nav {
   border-bottom: darkgray 2px solid;
 }
 nav a {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 a:not(.site-link) {
   color: gray;
