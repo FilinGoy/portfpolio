@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),
+        url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+        url('../fonts/Gilroy-Medium.woff') format('woff'),
+        url('../fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: local('Gilroy Bold'), local('Gilroy-Bold'),
+        url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Bold.woff') format('woff'),
+        url('../fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Gilroy", sans-serif;
+    font-weight: 400;
+    color: black;
+}
+
+nav {
+    border-bottom: darkgray 2px solid;
+    & a {
+        font-size: 24px;
+    }
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+    font-weight: bold;
+
+    &.active, &:active {
+        color: black;
+    }
+
+    &.hover {
+        color: lightgray;
+    }
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+h1, p {
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.rotate {
+    writing-mode: vertical-rl;
+    transform: scale(-1, -1);
+}
+
+.row>* {
+    padding: 0 0;
+}
+
+ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.ge-3 > * {
+    margin-top: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
+}
+
+.py-8 {
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
+}
