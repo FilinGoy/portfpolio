@@ -25,14 +25,22 @@ nav {
 nav a {
   font-size: 24px;
 }
-a {
+a:not(.site-link) {
   color: gray;
   text-decoration: none;
   font-weight: bold;
 }
+a.site-link,
+a.icons,
 a.active,
 a:active {
   color: black;
+}
+a.icons {
+  text-decoration: none;
+}
+a.icons:hover {
+  color: gray;
 }
 a.hover {
   color: lightgray;
@@ -67,4 +75,10 @@ ul {
 .py-8 {
   padding-top: 8rem !important;
   padding-bottom: 8rem !important;
+}
+.btn-send {
+  background-color: black;
+  font-weight: bold;
+  color: white;
+  border-radius: 25px;
 }
