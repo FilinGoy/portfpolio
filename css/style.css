@@ -2,11 +2,13 @@
   font-family: 'Gilroy';
   src: local('Gilroy Medium'), local('Gilroy-Medium'), url('../fonts/Gilroy-Medium.woff2') format('woff2'), url('../fonts/Gilroy-Medium.woff') format('woff'), url('../fonts/Gilroy-Medium.ttf') format('truetype');
   font-weight: 500;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Gilroy';
   src: local('Gilroy Bold'), local('Gilroy-Bold'), url('../fonts/Gilroy-Bold.woff2') format('woff2'), url('../fonts/Gilroy-Bold.woff') format('woff'), url('../fonts/Gilroy-Bold.ttf') format('truetype');
   font-weight: 700;
+  font-display: swap;
 }
 html,
 body {
@@ -14,11 +16,11 @@ body {
   font-weight: 400;
   color: black;
 }
-nav {
-  border-bottom: darkgray 2px solid;
-}
 nav a {
   font-size: 1.5rem;
+}
+nav > :first-child {
+  border-bottom: darkgray 2px solid;
 }
 a:not(.site-link) {
   color: gray;
