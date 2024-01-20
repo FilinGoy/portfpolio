@@ -71,6 +71,13 @@ ul {
   color: white;
   border-radius: 25px;
 }
+.img-fluid {
+  width: 100%;
+}
+.star {
+  height: 100%;
+  width: 100%;
+}
 .ge-3 > * {
   margin-top: 2.5rem !important;
   margin-bottom: 2.5rem !important;
