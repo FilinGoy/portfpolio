@@ -7,7 +7,7 @@
 	"theme_color": "#ffffff",
 	"dir": "ltr",
 	"display": "standalone",
-	"start_url": "https://filingoy.github.io/portfpolio",
+	"start_url": "https://filingoy.github.io/portfpolio/index.html",
 	"orientation": "any",
 	"icons": [
 		{
