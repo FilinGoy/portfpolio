@@ -24,9 +24,9 @@
 		<div class="offcanvas offcanvas-start p-3" data-bs-scroll="true" tabindex="-1" id="leftoffcanvas" aria-labelledby="leftoffcanvas">
 			<div class="offcanvas-header py-0">
 				<h3 class="offcanvas-title fw-bold fs-2">Denis Novik</h3>
-				<button type="button" class="btn-close btn-clear" data-bs-dismiss="leftoffcanvas" aria-label="Закрыть"></button>
+				<button type="button" class="btn-close btn-clear" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
 			</div>
-			<div class="offcanvas-body py-0 d-flex flex-column" data-bs-dismiss="leftoffcanvas">
+			<div class="offcanvas-body py-0 d-flex flex-column" data-bs-dismiss="offcanvas">
 				<p>
 					UX | UI designer 24 years old, Minsk
 				</p>
@@ -55,7 +55,7 @@
 					<a href="#contacts">Contacts</a>
 				</div>
 				<div class="d-flex d-md-none justify-content-between align-items-center">
-					<div class="btn btn-light d-flex align-items-center" data-bs-toggle="leftoffcanvas" data-bs-target="#leftoffcanvas" aria-controls="leftoffcanvas">
+					<div class="btn btn-light d-flex align-items-center" data-bs-toggle="offcanvas" data-bs-target="#leftoffcanvas" aria-controls="leftoffcanvas">
 						<img src="image/list.svg" alt="Меню" class="pe-1" />
 						Меню
 					</div>
@@ -66,7 +66,7 @@
 			</div>
 		</nav>
 
-		<div class="container py-5 px-4" id="home">
+		<div class="container py-5 px-4 px-md-0" id="home">
 			<div class="row justify-content-between">
 				<div class="col-10 col-md-3">
 					<h1>Denis Novik</h1>
@@ -211,7 +211,7 @@
 						You are welcome!
 					</p>
 				</div>
-				<div class="col-xxl-2 pb-5">
+				<div class="col-md-5 col-xxl-2 pb-5">
 					<button type="button" class="btn btn-send w-100 fs-4 shadow">Send message</button>
 				</div>
 				<div class="col-lg-4 d-flex justify-content-around py-5">
@@ -228,12 +228,12 @@
 		</div>
 
 		<link rel="stylesheet" href="/css/standart/bootstrap.min.css" />
-		<!-- <link rel="stylesheet" href="/css/bootstrap-fix.min.css"/> Баганный! -->
+		<!-- <link rel="stylesheet" href="/css/bootstrap-fix.min.css"/> Багованный! -->
 		<link rel="stylesheet" href="/css/style.css" />
 
 		<script src="/js/bootstrap.bundle.min.js" defer async></script>
 
-		<script>
+<!-- 		<script>
 			if ("serviceWorker" in navigator) {
 				navigator.serviceWorker.register("/js/sw.js");
 				/*                 .then(function (reg) {
@@ -243,6 +243,6 @@
                     console.error('Trouble with sw: ', error);
                 }); */
 			}
-		</script>
+		</script> -->
 	</body>
 </html>
