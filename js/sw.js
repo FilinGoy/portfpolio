@@ -191,7 +191,27 @@ self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open('pwa-store').then(function (cache) {
       return cache.addAll([
-        '/image/ico/android-icon-192x192-seochecker-manifest-3219.ico'
+        '/image/ico/android-icon-192x192-seochecker-manifest-3219.ico',
+        '/fonts/Gilroy-Medium.woff2',
+        '/fonts/Gilroy-Bold.woff2',
+        '/js/bootstrap.bundle.min.js',
+        '/css/standart/bootstrap.min.js',
+        '/image/icon_inst.svg',
+        '/image/icon_ps.webp',
+        '/image/list.svg',
+        '/image/main_frame.webp',
+        '/image/reebok_web.webp',
+        '/image/Star.webp',
+        '/image/Star-empty.webp',
+        '/image/braun_web.webp',
+        '/image/fashion-store_web.webp',
+        '/image/favicon.ico',
+        '/image/icon_ae.webp',
+        '/image/icon_ai.webp',
+        '/image/icon_be.svg',
+        '/image/icon_drl.svg',
+        '/image/icon_figma.webp',
+        '/image/icon_in.svg'
       ]);
     })
   );
