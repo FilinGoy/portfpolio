@@ -6,7 +6,7 @@ const STYLE_CACHE = "stylesheets";
 const IMAGE_CACHE = "img";
 const FONT_CACHE = "fonts";
 const QUEUE_NAME = "bgSyncQueue";
-const offlineFallbackPage = "/";
+const offlineFallbackPage = "/portfpolio";
 
 const GHPATH = '/portfpolio';
 const APP_PREFIX = 'gppwa_';
