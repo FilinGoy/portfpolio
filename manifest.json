@@ -7,82 +7,82 @@
 	"theme_color": "#ffffff",
 	"dir": "ltr",
 	"display": "standalone",
-	"start_url": "index.html",
+	"start_url": "/index.html",
 	"orientation": "any",
 	"icons": [
 		{
-			"src": "image/ico/maskable_icon.png",
+			"src": "/image/maskable_icon.png",
 			"sizes": "144x144",
 			"type": "image/png",
 			"purpose": "maskable"
 		},
 		{
-			"src": "512x512.png",
+			"src": "/image//512x512.png",
 			"type": "image/png",
 			"sizes": "512x512"
 		},
 		{
-			"src": "image/ico/android-icon-192x192-seochecker-manifest-3219.ico",
+			"src": "/image/android-icon-192x192-seochecker-manifest-3219.ico",
 			"type": "image/png",
 			"sizes": "192x192"
 		},
 		{
-			"src": "image/ico/apple-icon-180x180-seochecker-manifest-3219.ico",
+			"src": "/image/apple-icon-180x180-seochecker-manifest-3219.ico",
 			"type": "image/png",
 			"sizes": "180x180"
 		},
 		{
-			"src": "image/ico/apple-icon-152x152-seochecker-manifest-3219.ico",
+			"src": "/image/apple-icon-152x152-seochecker-manifest-3219.ico",
 			"type": "image/png",
 			"sizes": "152x152"
 		},
 		{
-			"src": "image/ico/apple-icon-144x144-seochecker-manifest-3219.ico",
+			"src": "/image/apple-icon-144x144-seochecker-manifest-3219.ico",
 			"type": "image/png",
 			"sizes": "144x144"
 		},
 		{
-			"src": "image/ico/apple-icon-120x120-seochecker-manifest-3219.ico",
+			"src": "/image/apple-icon-120x120-seochecker-manifest-3219.ico",
 			"type": "image/png",
 			"sizes": "120x120"
 		},
 		{
-			"src": "image/ico/apple-icon-114x114-seochecker-manifest-3219.ico",
+			"src": "/image/apple-icon-114x114-seochecker-manifest-3219.ico",
 			"type": "image/png",
 			"sizes": "114x114"
 		},
 		{
-			"src": "image/ico/favicon-96x96-seochecker-manifest-3219.ico",
+			"src": "/image/favicon-96x96-seochecker-manifest-3219.ico",
 			"type": "image/png",
 			"sizes": "96x96"
 		},
 		{
-			"src": "image/ico/apple-icon-76x76-seochecker-manifest-3219.ico",
+			"src": "/image/apple-icon-76x76-seochecker-manifest-3219.ico",
 			"type": "image/png",
 			"sizes": "76x76"
 		},
 		{
-			"src": "image/ico/apple-icon-72x72-seochecker-manifest-3219.ico",
+			"src": "/image/apple-icon-72x72-seochecker-manifest-3219.ico",
 			"type": "image/png",
 			"sizes": "72x72"
 		},
 		{
-			"src": "image/ico/apple-icon-60x60-seochecker-manifest-3219.ico",
+			"src": "/image/apple-icon-60x60-seochecker-manifest-3219.ico",
 			"type": "image/png",
 			"sizes": "60x60"
 		},
 		{
-			"src": "image/ico/apple-icon-57x57-seochecker-manifest-3219.ico",
+			"src": "/image/apple-icon-57x57-seochecker-manifest-3219.ico",
 			"type": "image/png",
 			"sizes": "57x57"
 		},
 		{
-			"src": "image/ico/favicon-32x32-seochecker-manifest-3219.ico",
+			"src": "/image/favicon-32x32-seochecker-manifest-3219.ico",
 			"type": "image/png",
 			"sizes": "32x32"
 		},
 		{
-			"src": "image/ico/favicon-16x16-seochecker-manifest-3219.ico",
+			"src": "/image/favicon-16x16-seochecker-manifest-3219.ico",
 			"type": "image/png",
 			"sizes": "16x16"
 		}
