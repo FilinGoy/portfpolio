@@ -8,25 +8,37 @@ const FONT_CACHE = "fonts";
 const QUEUE_NAME = "bgSyncQueue";
 const offlineFallbackPage = "/";
 
+const GHPATH = '/portfpolio';
+const APP_PREFIX = 'gppwa_';
+
+const VERSION = 'version_00';
+
+const URLS = [
+  `${GHPATH}/`,
+  `${GHPATH}/index.html`,
+  `${GHPATH}/css/styles.css`,
+  `${GHPATH}/js/app.js`
+]
+
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.1.5/workbox-sw.js');
 
-const {registerRoute} = workbox.routing;
-const {CacheFirst} = workbox.strategies;
-const {CacheableResponse} = workbox.cacheableResponse;
-const {ExpirationPlugin}  = workbox.expiration;
+const { registerRoute } = workbox.routing;
+const { CacheFirst } = workbox.strategies;
+const { CacheableResponse } = workbox.cacheableResponse;
+const { ExpirationPlugin } = workbox.expiration;
 
 
 navigationPreload: true;
-  runtimeCaching: [{
-    urlPattern: ({request}) => request.mode === 'navigate',
-    handler: 'NetworkOnly',
-    options: {
-      precacheFallback: {
-        // This URL needs to be included in your precache manifest.
-        fallbackURL: offlineFallbackPage,
-      },
+runtimeCaching: [{
+  urlPattern: ({ request }) => request.mode === 'navigate',
+  handler: 'NetworkOnly',
+  options: {
+    precacheFallback: {
+      // This URL needs to be included in your precache manifest.
+      fallbackURL: offlineFallbackPage,
     },
-  }];
+  },
+}];
 
 
 
@@ -56,7 +68,7 @@ registerRoute(
       new workbox.expiration.ExpirationPlugin({
         maxEntries: 15,
       }),
-	   new ExpirationPlugin({
+      new ExpirationPlugin({
         maxAgeSeconds: 24 * 60 * 60,
       }),
     ],
@@ -64,14 +76,14 @@ registerRoute(
 );
 
 registerRoute(
-  ({event}) => event.request.destination === 'document',
+  ({ event }) => event.request.destination === 'document',
   new workbox.strategies.NetworkFirst({
     cacheName: HTML_CACHE,
     plugins: [
       new workbox.expiration.ExpirationPlugin({
         maxEntries: 10,
       }),
-	   new ExpirationPlugin({
+      new ExpirationPlugin({
         maxAgeSeconds: 24 * 60 * 60,
       }),
     ],
@@ -79,14 +91,14 @@ registerRoute(
 );
 
 registerRoute(
-  ({event}) => event.request.destination === 'script',
+  ({ event }) => event.request.destination === 'script',
   new workbox.strategies.StaleWhileRevalidate({
     cacheName: JS_CACHE,
     plugins: [
       new workbox.expiration.ExpirationPlugin({
         maxEntries: 15,
       }),
-	   new ExpirationPlugin({
+      new ExpirationPlugin({
         maxAgeSeconds: 24 * 60 * 60,
       }),
     ],
@@ -94,14 +106,14 @@ registerRoute(
 );
 
 registerRoute(
-  ({event}) => event.request.destination === 'style',
+  ({ event }) => event.request.destination === 'style',
   new workbox.strategies.StaleWhileRevalidate({
     cacheName: STYLE_CACHE,
     plugins: [
       new workbox.expiration.ExpirationPlugin({
         maxEntries: 15,
       }),
-	   new ExpirationPlugin({
+      new ExpirationPlugin({
         maxAgeSeconds: 24 * 60 * 60,
       }),
     ],
@@ -109,14 +121,14 @@ registerRoute(
 );
 
 registerRoute(
-  ({event}) => event.request.destination === 'image',
+  ({ event }) => event.request.destination === 'image',
   new workbox.strategies.StaleWhileRevalidate({
     cacheName: IMAGE_CACHE,
     plugins: [
       new workbox.expiration.ExpirationPlugin({
         maxEntries: 15,
       }),
-	   new ExpirationPlugin({
+      new ExpirationPlugin({
         maxAgeSeconds: 24 * 60 * 60,
       }),
     ],
@@ -124,14 +136,14 @@ registerRoute(
 );
 
 registerRoute(
-  ({event}) => event.request.destination === 'font',
+  ({ event }) => event.request.destination === 'font',
   new workbox.strategies.StaleWhileRevalidate({
     cacheName: FONT_CACHE,
     plugins: [
       new workbox.expiration.ExpirationPlugin({
         maxEntries: 15,
       }),
-	   new ExpirationPlugin({
+      new ExpirationPlugin({
         maxAgeSeconds: 24 * 60 * 60,
       }),
     ],
@@ -146,7 +158,7 @@ registerRoute(
       new workbox.expiration.ExpirationPlugin({
         maxEntries: 15,
       }),
-	   new ExpirationPlugin({
+      new ExpirationPlugin({
         maxAgeSeconds: 24 * 60 * 60,
       }),
     ],
@@ -154,7 +166,7 @@ registerRoute(
 );
 
 self.addEventListener('fetch', (event) => {
-	
+
   if (event.request.mode === 'navigate') {
     event.respondWith((async () => {
       try {
@@ -175,20 +187,20 @@ self.addEventListener('fetch', (event) => {
     })());
   }
 });
-self.addEventListener('install', function(e) {
- e.waitUntil(
-   caches.open('pwa-store').then(function(cache) {
-     return cache.addAll([
-       '/image/ico/android-icon-192x192-seochecker-manifest-3219.ico'
-     ]);
-   })
- );
+self.addEventListener('install', function (e) {
+  e.waitUntil(
+    caches.open('pwa-store').then(function (cache) {
+      return cache.addAll([
+        '/image/ico/android-icon-192x192-seochecker-manifest-3219.ico'
+      ]);
+    })
+  );
 });
 
-self.addEventListener('fetch', function(e) {
+self.addEventListener('fetch', function (e) {
   //console.log(e.request.url);
   e.respondWith(
-    caches.match(e.request).then(function(response) {
+    caches.match(e.request).then(function (response) {
       return response || fetch(e.request);
     })
   );
