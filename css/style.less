@@ -14,12 +14,32 @@
 	font-display: swap;
 }
 
+*::focus-visible::focus {
+	border-radius: 25px;
+	outline: lightblue solid 1px;
+}
+
 /* Базовые стили */
 html,
 body {
 	font-family: "Gilroy", sans-serif;
 	font-weight: 400;
 	color: black;
+}
+
+@keyframes wiggle {
+	0% {
+		transform: rotate(0deg);
+	}
+	55% {
+		transform: rotate(5deg);
+	}
+	95% {
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
 }
 
 a {
@@ -30,16 +50,17 @@ a {
 	}
 
 	&.site-link,
-	&.icons,
 	&.active,
-	&:active {
+	&:active,
+	&:visited {
 		color: black;
 	}
 
 	&.icons {
 		text-decoration: none;
 		&:hover {
-			color: gray;
+			color: blue;
+			animation: wiggle linear 0.2s;
 		}
 	}
 
@@ -78,6 +99,7 @@ h2 {
 ul {
 	padding-left: 0;
 	margin-bottom: 0;
+	list-style: none;
 }
 
 /* Кнопка отправки */
@@ -111,32 +133,70 @@ ul {
 }
 
 /* Навигация */
-nav {
+.new-nav {
 	& > .container {
 		border-bottom: darkgray 2px solid;
 	}
+	a {
+		font-size: 1.5rem;
+		position: relative;
+		display: inline-block;
+		padding: 5px 0;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 0;
+			height: 2px;
+			background: darkgray;
+			transition: width 0.3s, left 0.3s;
+		}
+
+		&:hover::after {
+			width: 100%;
+			left: 0;
+		}
+
+		&:focus::after {
+			width: 100%;
+			left: 0;
+		}
+	}
 }
 
-nav a {
-	font-size: 1.5rem;
-	position: relative;
-	display: inline-block;
-	padding: 5px 0;
-
-	&::after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		width: 0;
-		height: 2px;
-		background: darkgray;
-		transition: width 0.3s, left 0.3s;
+/* Навигация */
+.left-nav {
+	& > .container {
+		border-bottom: darkgray 2px solid;
 	}
+	a {
+		font-size: 1.5rem;
+		position: relative;
+		display: inline-block;
+		padding: 5px 0;
 
-	&:hover::after {
-		width: 100%;
-		left: 0;
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			width: 0;
+			height: 2px;
+			background: darkgray;
+			transition: width 0.3s, left 0.3s;
+		}
+
+		&:hover::after {
+			width: 100%;
+			left: 0;
+		}
+
+		&:focus::after {
+			width: 100%;
+			left: 0;
+		}
 	}
 }
 

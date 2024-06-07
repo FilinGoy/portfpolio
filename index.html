@@ -29,16 +29,18 @@
 				<h3 class="offcanvas-title fw-bold fs-2">Denis Novik</h3>
 				<button type="button" class="btn-close btn-clear" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
 			</div>
-			<nav class="offcanvas-body py-0 d-flex flex-column" data-bs-dismiss="offcanvas">
+			<nav class="offcanvas-body py-0 d-flex flex-column left-nav" data-bs-dismiss="offcanvas">
 				<p>UX | UI designer 24 years old, Minsk</p>
 
 				<hr />
 
-				<a href="#" class="active fs-3">Home</a>
-				<a href="#abous-us" class="fs-3">About me</a>
-				<a href="#skills" class="fs-3">Skills</a>
-				<a href="#portfolio" class="fs-3">Portfolio</a>
-				<a href="#contacts" class="fs-3">Contacts</a>
+				<ul>
+					<li><a href="#" class="active fs-3">Home</a></li>
+					<li><a href="#abous-us" class="fs-3">About me</a></li>
+					<li><a href="#skills" class="fs-3">Skills</a></li>
+					<li><a href="#portfolio" class="fs-3">Portfolio</a></li>
+					<li><a href="#contacts" class="fs-3">Contacts</a></li>
+				</ul>
 
 				<div class="mt-auto fs-5">
 					<hr />
@@ -46,7 +48,7 @@
 				</div>
 			</nav>
 		</div>
-		<nav class="container-fluid sticky-md-top bg-white">
+		<nav class="container-fluid sticky-md-top bg-white new-nav">
 			<div class="container px-0 py-1 py-sm-3 py-md-5">
 				<div class="d-none d-md-flex justify-content-between">
 					<a href="#" class="active">Home</a>
@@ -72,12 +74,9 @@
 				<div class="col-10 col-md-3">
 					<h1>Denis Novik</h1>
 				</div>
-				<div class="col-10 col-md-4 col-lg-3 fs-4 d-flex justify-content-md-center align-self-md-end">
-					<p class="fs-4">
-						UX | UI designer
-						<br />
-						24 years old, Minsk
-					</p>
+				<div class="col-10 col-md-4 col-lg-3 fs-4 d-flex flex-column justify-content-md-center align-self-md-end">
+					<p class="fs-4">UX | UI designer</p>
+					<p class="fs-4">24 years old, Minsk</p>
 				</div>
 				<div class="col-1 col-lg-3 d-none d-md-flex align-items-center justify-content-end fs-4">
 					<a href="#" class="rotate"> RU <span class="text-black">| ENG</span> </a>
@@ -119,7 +118,7 @@
 				<div class="col text-center d-flex flex-column justify-content-between align-items-around px-5 py-5">
 					<div class="mb-4">
 						<img src="image/icon_ps.webp" width="90" height="90" alt="Abode Photoshop" />
-						<p class="py-4">Abode<br />Photoshop</p>
+						<p class="py-4">Abode\nPhotoshop</p>
 					</div>
 					<div class="d-flex justify-content-evenly">
 						<a href="#"><img src="image/Star.webp" width="22" height="20" alt="1 звезда" class="star" /></a>
@@ -227,10 +226,10 @@
 					<button type="button" class="btn btn-send w-100 fs-4 shadow">Send message</button>
 				</div>
 				<div class="col-lg-4 d-flex justify-content-around py-5">
-					<img src="image/icon_in.svg" width="41" height="41" alt="LinkedIn" />
-					<img src="image/icon_inst.svg" width="40" height="41" alt="Instagram" />
-					<img src="image/icon_be.svg" width="41" height="40" alt="Behance" />
-					<img src="image/icon_drl.svg" width="40" height="41" alt="Dribbble" />
+					<a href="#" class="icons"><img src="image/icon_in.svg" width="41" height="41" alt="LinkedIn" /></a>
+					<a href="#" class="icons"><img src="image/icon_inst.svg" width="40" height="41" alt="Instagram" /></a>
+					<a href="#" class="icons"><img src="image/icon_be.svg" width="41" height="40" alt="Behance" /></a>
+					<a href="#" class="icons"><img src="image/icon_drl.svg" width="40" height="41" alt="Dribbble" /></a>
 				</div>
 				<div class="col text-secondary">
 					Like me on<br />

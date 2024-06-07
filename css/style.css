@@ -10,6 +10,10 @@
   font-weight: 700;
   font-display: swap;
 }
+*::focus-visible::focus {
+  border-radius: 25px;
+  outline: lightblue solid 1px;
+}
 /* Базовые стили */
 html,
 body {
@@ -17,22 +21,37 @@ body {
   font-weight: 400;
   color: black;
 }
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  55% {
+    transform: rotate(5deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 a:not(.site-link) {
   color: gray;
   text-decoration: none;
   font-weight: bold;
 }
 a.site-link,
-a.icons,
 a.active,
-a:active {
+a:active,
+a:visited {
   color: black;
 }
 a.icons {
   text-decoration: none;
 }
 a.icons:hover {
-  color: gray;
+  color: blue;
+  animation: wiggle linear 0.2s;
 }
 a.hover {
   color: lightgray;
@@ -62,6 +81,7 @@ h2 {
 ul {
   padding-left: 0;
   margin-bottom: 0;
+  list-style: none;
 }
 /* Кнопка отправки */
 .btn-send {
@@ -89,16 +109,16 @@ ul {
   padding-bottom: 8rem !important;
 }
 /* Навигация */
-nav > .container {
+.new-nav > .container {
   border-bottom: darkgray 2px solid;
 }
-nav a {
+.new-nav a {
   font-size: 1.5rem;
   position: relative;
   display: inline-block;
   padding: 5px 0;
 }
-nav a::after {
+.new-nav a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -108,7 +128,39 @@ nav a::after {
   background: darkgray;
   transition: width 0.3s, left 0.3s;
 }
-nav a:hover::after {
+.new-nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+.new-nav a:focus::after {
+  width: 100%;
+  left: 0;
+}
+/* Навигация */
+.left-nav > .container {
+  border-bottom: darkgray 2px solid;
+}
+.left-nav a {
+  font-size: 1.5rem;
+  position: relative;
+  display: inline-block;
+  padding: 5px 0;
+}
+.left-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: darkgray;
+  transition: width 0.3s, left 0.3s;
+}
+.left-nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+.left-nav a:focus::after {
   width: 100%;
   left: 0;
 }
