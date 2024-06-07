@@ -69,7 +69,7 @@ d.addEventListener('DOMContentLoaded', () => {
     container.addEventListener('mouseenter', stopAutoScroll);
     container.addEventListener('mouseleave', startAutoScroll);
 
-    // Обработчики событий для свайпа
+/*     // Обработчики событий для свайпа
     let isDragging = false;
     let startX;
     let scrollLeft;
@@ -114,5 +114,5 @@ d.addEventListener('DOMContentLoaded', () => {
             currentIndex = totalSlides - 1;
             updateIndicator();
         }
-    }
+    } */
 });
