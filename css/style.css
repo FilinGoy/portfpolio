@@ -10,10 +10,6 @@
   font-weight: 700;
   font-display: swap;
 }
-*::focus-visible::focus {
-  border-radius: 25px;
-  outline: lightblue solid 1px;
-}
 /* Базовые стили */
 html,
 body {
