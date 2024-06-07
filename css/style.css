@@ -1,26 +1,21 @@
 @font-face {
-  font-family: 'Gilroy';
-  src: local('Gilroy Medium'), local('Gilroy-Medium'), url('../fonts/Gilroy-Medium.woff2') format('woff2'), url('../fonts/Gilroy-Medium.woff') format('woff'), url('../fonts/Gilroy-Medium.ttf') format('truetype');
+  font-family: "Gilroy";
+  src: local("Gilroy Medium"), local("Gilroy-Medium"), url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("truetype");
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Gilroy';
-  src: local('Gilroy Bold'), local('Gilroy-Bold'), url('../fonts/Gilroy-Bold.woff2') format('woff2'), url('../fonts/Gilroy-Bold.woff') format('woff'), url('../fonts/Gilroy-Bold.ttf') format('truetype');
+  font-family: "Gilroy";
+  src: local("Gilroy Bold"), local("Gilroy-Bold"), url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("truetype");
   font-weight: 700;
   font-display: swap;
 }
+/* Базовые стили */
 html,
 body {
   font-family: "Gilroy", sans-serif;
   font-weight: 400;
   color: black;
-}
-nav a {
-  font-size: 1.5rem;
-}
-nav > :first-child {
-  border-bottom: darkgray 2px solid;
 }
 a:not(.site-link) {
   color: gray;
@@ -42,6 +37,7 @@ a.icons:hover {
 a.hover {
   color: lightgray;
 }
+/* Заголовки */
 h1 {
   font-size: 64px;
   font-weight: bold;
@@ -54,30 +50,36 @@ h2 {
   font-size: 50px;
   font-weight: bold;
 }
+/* Вертикальный текст */
 .rotate {
   writing-mode: vertical-rl;
   transform: scale(-1, -1);
 }
+/* Общие отступы */
 .row > * {
-  padding: 0 0;
+  padding: 0;
 }
 ul {
   padding-left: 0;
   margin-bottom: 0;
 }
+/* Кнопка отправки */
 .btn-send {
   background-color: black;
   font-weight: bold;
   color: white;
   border-radius: 25px;
 }
+/* Размеры изображений */
 .img-fluid {
   width: 100%;
 }
+/* Звезды рейтинга */
 .star {
   height: 100%;
   width: 100%;
 }
+/* Переполнение Bootstrap */
 .ge-3 > * {
   margin-top: 2.5rem !important;
   margin-bottom: 2.5rem !important;
@@ -85,4 +87,67 @@ ul {
 .py-8 {
   padding-top: 8rem !important;
   padding-bottom: 8rem !important;
+}
+/* Навигация */
+nav > .container {
+  border-bottom: darkgray 2px solid;
+}
+nav a {
+  font-size: 1.5rem;
+  position: relative;
+  display: inline-block;
+  padding: 5px 0;
+}
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: darkgray;
+  transition: width 0.3s, left 0.3s;
+}
+nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+/* Стили слайдера */
+.row-snap {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.row-snap::-webkit-scrollbar {
+  display: none;
+}
+.row-snap > div {
+  width: 100%;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+.prev-button,
+.next-button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #212529;
+  cursor: pointer;
+  outline: none;
+}
+.indicators {
+  display: flex;
+  align-items: center;
+}
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #adb5bd;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.indicator.active {
+  background-color: #212529;
 }
